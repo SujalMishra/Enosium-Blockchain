@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
 import './App.css';
+import AfterLoginBody from "./components/AfterLoginBody"
+import NavBar from './components/NavBar';
+import LoginBody from './components/LoginBody';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+function App() {  
+  let {isLogin,setIsLogin}=useState("false")
+isLogin="true";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <NavBar/>
+     {isLogin==="false"? <LoginBody/> : <AfterLoginBody/>}
+           
     </div>
   );
 }
