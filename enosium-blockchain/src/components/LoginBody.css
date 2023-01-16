@@ -1,0 +1,14 @@
+.wallet-connec{
+    background-color: bisque;
+    height: 50vh;
+    margin-top: 10rem;
+    width:75vh;
+    display:auto;
+}
+
+.block{
+    display: flex;
+    justify-content: center;
+
+}
+
