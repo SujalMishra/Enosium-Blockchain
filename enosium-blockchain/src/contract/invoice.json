@@ -1,5 +1,138 @@
 {
-    "contractAddress" : "",
+    "contractAddress" : "0x6201Ec952e5f87FF53C532eA497c18d6114D8236",
     "abi": [
-        
+        [
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "buyer",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "seller",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "invoiceAmount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "invoiceDate",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "_buyerPAN",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "_sellerPAN",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "status",
+                        "type": "string"
+                    }
+                ],
+                "name": "addInvoice",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "PAN",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "buyer",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "invoiceIndex",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "isPaid",
+                        "type": "string"
+                    }
+                ],
+                "name": "updatePaymentStatus",
+                "outputs": [],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "PAN",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "buyer",
+                        "type": "address"
+                    }
+                ],
+                "name": "getInvoices",
+                "outputs": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "address",
+                                "name": "buyer",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "seller",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "buyerPAN",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "sellerPAN",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "invoiceAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "invoiceDate",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "isPaid",
+                                "type": "string"
+                            }
+                        ],
+                        "internalType": "struct Invoice.InvoiceData[]",
+                        "name": "",
+                        "type": "tuple[]"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]
     ]}

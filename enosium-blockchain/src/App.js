@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const connectWallet = async () => {
-      const contractAddress = "";
+      const contractAddress = abi.contractAddress;
       const contractABI = abi.abi;
       try {
         const { ethereum } = window;
@@ -43,21 +43,24 @@ function App() {
           );
           setAccount(account);
           setState({ provider, signer, contract });
+          console.log(state);
+          console.log(account);
         } else {
           alert("Please install metamask !!");
         }
       } catch (error) {
         console.log(error);
       }
+      
     };
     connectWallet();
   }, []);
-  let { isLogin, setIsLogin } = useState("false");
-  isLogin = "true";
+  // connectWallet();
   return (
     <div className="App">
       <NavBar />
-      {isLogin === "false" ? <BeforeLoginBody /> : <AfterLoginBody />}
+     
+      {account ==="None" ? <BeforeLoginBody /> : <AfterLoginBody />}
     </div>
   );
 }
