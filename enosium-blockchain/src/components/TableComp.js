@@ -1,7 +1,7 @@
 import React from "react";
-import Table from 'react-bootstrap/Table';
-function TableComp(){
-    return (
+import Table from "react-bootstrap/Table";
+function TableComp() {
+  return (
     <Table striped hover size="sm">
       <thead>
         <tr>
@@ -23,11 +23,6 @@ function TableComp(){
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Larry the Bird</td>
-          <td>@twitter</td>
         </tr>
       </tbody>
     </Table>

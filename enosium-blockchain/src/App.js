@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import AfterLoginBody from "./components/AfterLoginBody";
 import NavBar from "./components/NavBar";
-import LoginBody from "./components/LoginBody";
+import BeforeLoginBody from "./components/BeforeLoginBody";
 import "bootstrap/dist/css/bootstrap.min.css";
 import abi from "./contract/invoice.json";
 import { ethers } from "ethers";
@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {isLogin === "false" ? <LoginBody /> : <AfterLoginBody />}
+      {isLogin === "false" ? <BeforeLoginBody /> : <AfterLoginBody />}
     </div>
   );
 }
